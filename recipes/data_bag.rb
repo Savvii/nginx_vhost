@@ -1,6 +1,6 @@
 bag = node.nginx.vhost.data_bag_name
 
-node.nginx.vhosts.each do |instance|
+data_bag(bag).each do |instance|
   instance_data = data_bag_item( bag, instance )
 
   nginx_vhost instance do
