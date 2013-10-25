@@ -5,7 +5,7 @@ def load_current_resource
   new_resource.servers
   new_resource.sockets
   new_resource.hostname
-  new_resource.port
+  new_resource.listen
   new_resource.root_path
   new_resource.ssl_key
   new_resource.ssl_cert

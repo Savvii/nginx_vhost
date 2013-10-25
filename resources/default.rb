@@ -7,7 +7,7 @@ attribute :servers,  :kind_of => Array,  :default => []
 attribute :sockets,  :kind_of => Array,  :default => []
 
 attribute :hostname, :kind_of => String, :default => "_"
-attribute :port,     :kind_of => Fixnum, :default => 80
+attribute :listen,   :kind_of => String, :default => "80" # alternatives: localhost:80 or unix:/striped/knitted.sock
 attribute :root_path,:kind_of => String, :required => true
 attribute :ssl_key,  :kind_of => String
 attribute :ssl_cert, :kind_of => String
