@@ -29,8 +29,10 @@ Attributes
 ==========
 
 ## data_bag.rb
+```
 node.nginx.vhosts = []
 node.nginx.vhost.data_bag_name = "nginx"
+```
 
 Usage
 =====
