@@ -10,7 +10,7 @@ upstream <%= @name %> {
 <% end %>
 
 server {
-  server_name <%= @hostname %>;
+  server_name<% @domains.each do |domain| %> <%= domain %><% end %>;
   listen <%= @listen %>;
 
   root <%= @root_path %>/current/public;

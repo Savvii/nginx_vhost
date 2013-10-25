@@ -5,7 +5,19 @@ node.nginx.vhosts.each do |instance|
 
   nginx_vhost instance do
     instance_data.each do |attribute,value|
-      send(attribute, value) unless attribute == "id"
+      case attribute
+      when "id"
+      when "domains"
+        prefixed_domains = []
+        ["", "www.", "*."].each do |prefix|
+          value.each do |domain|
+            prefixed_domains << prefix + domain
+          end
+        end
+        domains prefixed_domains
+      else
+        send(attribute, value)
+      end
     end
   end
 end

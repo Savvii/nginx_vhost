@@ -4,7 +4,7 @@ def load_current_resource
   new_resource.upstream
   new_resource.servers
   new_resource.sockets
-  new_resource.hostname
+  new_resource.domains
   new_resource.listen
   new_resource.root_path
   new_resource.ssl_key
