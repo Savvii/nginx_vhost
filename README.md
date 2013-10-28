@@ -34,6 +34,11 @@ node.nginx.vhosts = []
 node.nginx.vhost.data_bag_name = "nginx"
 ```
 
+### site_root
+`site_root` is the root of the site. The template will add `/wordpress`
+to it. So, if your wordpress lives in `/var/www/foo/wordpress`, then set
+site_root to `/var/www/foo`.
+
 ### SSL
 Define both @ssl_cert and @ssl_key to get SSL support. Defining both,
 with:
