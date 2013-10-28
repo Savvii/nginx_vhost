@@ -5,7 +5,7 @@ server {
   listen 443 ssl;
 <% end -%>
 
-  root <%= @root_path %>/current/public;
+  root <%= @root_path %>;
 
 <% if @ssl_certificate_key && @ssl_certificate -%>
   ssl on;
