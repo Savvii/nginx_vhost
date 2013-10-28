@@ -9,6 +9,12 @@ server {
   index index.html index.php;
   autoindex off;
 
+  ###########################################################################
+  #                                 LOGGING                                 #
+  ###########################################################################
+  access_log          <%= File.join(@site_root, "log", "#{@name}.access.log") %>;
+  error_log           <%= File.join(@site_root, "log", "#{@name}.error.log") %>;
+
 <% if @ssl_certificate_key && @ssl_certificate -%>
   ssl on;
   ssl_certificate     <%= @ssl_certificate %>;
