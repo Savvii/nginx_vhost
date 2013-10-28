@@ -10,6 +10,7 @@ attribute :ssl_certificate_key, :kind_of => String
 attribute :ssl_certificate,     :kind_of => String
 
 attribute :nginx_dir,:kind_of => String, :default => "/etc/nginx/"
+attribute :includes, :kind_of => Array,  :default => []
 
 def initialize(*args)
   super

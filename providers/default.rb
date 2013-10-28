@@ -5,6 +5,7 @@ def load_current_resource
   new_resource.site_root
   new_resource.ssl_certificate_key
   new_resource.ssl_certificate
+  new_resource.includes
 end
 
 action :enable do

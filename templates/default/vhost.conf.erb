@@ -33,4 +33,13 @@ server {
     fastcgi_buffers       8 256k;
     fastcgi_buffer_size   128k;
   }
+
+<% unless @includes.empty? %>
+  ###########################################################################
+  #                             Custom includes                             #
+  ###########################################################################
+  <% @includes.each do |include_file| %>
+  include <%= include_file %>;
+  <% end -%>
+<% end -%>
 }
