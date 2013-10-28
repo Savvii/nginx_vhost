@@ -3,7 +3,7 @@ def load_current_resource
   new_resource.nginx_dir
   new_resource.domains
   new_resource.listen
-  new_resource.root_path
+  new_resource.site_root
   new_resource.ssl_certificate_key
   new_resource.ssl_certificate
 end
