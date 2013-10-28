@@ -5,7 +5,9 @@ server {
   listen 443 ssl;
 <% end -%>
 
-  root <%= @root_path %>/current/public;
+  root <%= @site_root %>/wordpress;
+  index index.html index.php;
+  autoindex off;
 
 <% if @ssl_certificate_key && @ssl_certificate -%>
   ssl on;
