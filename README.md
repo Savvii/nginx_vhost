@@ -5,6 +5,10 @@ Renders and enables vhost files for nginx.
 This was written because at the time there was no other simple way to render
 out a vhost file for nginx that proxies to unicorn locally over a unix socket
 
+Originally developed by [Blue Box](https://github.com/bbg-cookbooks/nginx_vhost), forked and updated for PHP,
+Wordpress and our hosting platform by [Savvii](http://savvii.nl). All
+props to Blue Box!
+
 ## data_bag.rb
 Lets you configure multiple vhost files from data bags.
 
