@@ -40,8 +40,8 @@ with:
 
 ```json
 {
- "ssl_certificate": "/etc/nginx/ssl/savviihq.com/2013/savviihq.com.crt;",
- "ssl_certificate_key?": "/etc/nginx/ssl/savviihq.com/2013/private.key;"
+ "ssl_certificate": "/etc/nginx/ssl/savviihq.com/2013/savviihq.com.crt",
+ "ssl_certificate_key?": "/etc/nginx/ssl/savviihq.com/2013/private.key"
 }
 ```
 
