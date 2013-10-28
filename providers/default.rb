@@ -1,5 +1,4 @@
 def load_current_resource
-  new_resource.log_dir
   new_resource.nginx_dir
   new_resource.domains
   new_resource.listen
