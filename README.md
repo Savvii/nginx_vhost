@@ -83,6 +83,20 @@ And an additional:
 NOTE: the recipe does not check wether the certificate exists, is valid
 or any other check on the certificate.
 
+## Custom includes
+In case you want the vhost to include other configuration, add it to
+the `includes` attribute:
+
+```json
+  "includes": [
+    "/etc/nginx/custom.d/wordpress.conf"
+  ]
+```
+results in: 
+```
+   include /etc/nginx/custom.d/wordpress.conf;
+```
+
 Usage
 =====
 
