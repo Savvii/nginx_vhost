@@ -4,8 +4,8 @@ def load_current_resource
   new_resource.domains
   new_resource.listen
   new_resource.root_path
-  new_resource.ssl_key
-  new_resource.ssl_cert
+  new_resource.ssl_certificate_key
+  new_resource.ssl_certificate
 end
 
 action :enable do

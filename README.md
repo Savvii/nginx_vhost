@@ -34,6 +34,36 @@ node.nginx.vhosts = []
 node.nginx.vhost.data_bag_name = "nginx"
 ```
 
+### SSL
+Define both @ssl_cert and @ssl_key to get SSL support. Defining both,
+with:
+
+```json
+{
+ "ssl_certificate": "/etc/nginx/ssl/savviihq.com/2013/savviihq.com.crt;",
+ "ssl_certificate_key?": "/etc/nginx/ssl/savviihq.com/2013/private.key;"
+}
+```
+
+results in e.g.:
+
+```
+  ssl on;
+  ssl_certificate     /etc/nginx/ssl/savviihq.com/2013/savviihq.com.crt;
+  ssl_certificate_key /etc/nginx/ssl/savviihq.com/2013/private.key;
+  ssl_protocols TLSv1.2 TLSv1.1 TLSv1 SSLv3;
+  ssl_ciphers ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!EDH:!AESGCM;
+  ssl_prefer_server_ciphers on;
+```
+
+And an additional:
+```
+  listen 334 ssl;
+```
+
+NOTE: the recipe does not check wether the certificate exists, is valid
+or any other check on the certificate.
+
 Usage
 =====
 
