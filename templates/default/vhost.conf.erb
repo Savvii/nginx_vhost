@@ -5,7 +5,7 @@ server {
   listen 443 ssl;
 <% end -%>
 
-  root <%= @site_root %>/wordpress;
+  root <%= File.join(@site_root, "wordpress") %>;
   index index.html index.php;
   autoindex off;
 
