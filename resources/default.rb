@@ -9,7 +9,6 @@ attribute :site_root,:kind_of => String, :required => true
 attribute :ssl_certificate_key, :kind_of => String
 attribute :ssl_certificate,     :kind_of => String
 
-attribute :log_dir,  :kind_of => String, :default => "/var/log/nginx/"
 attribute :nginx_dir,:kind_of => String, :default => "/etc/nginx/"
 
 def initialize(*args)
