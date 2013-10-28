@@ -35,9 +35,18 @@ node.nginx.vhost.data_bag_name = "nginx"
 ```
 
 ### site_root
-`site_root` is the root of the site. The template will add `/wordpress`
-to it. So, if your wordpress lives in `/var/www/foo/wordpress`, then set
-site_root to `/var/www/foo`.
+`site_root` is the root of the site. The template and recipe expect a
+certain setup. E.g. site_root: `/var/www/foo` results in:
+
+```
+/var/www/foo
+├── wordpress
+│   ├── index.php
+│   └── the rest of wordpress
+├── log
+    ├── foo.access.log
+    └── foo.error.log
+```
 
 ### PHPFPM
 phpfpm is hardcoded. Should probably be a (group of) variables. Or a
