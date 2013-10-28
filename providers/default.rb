@@ -1,9 +1,6 @@
 def load_current_resource
   new_resource.log_dir
   new_resource.nginx_dir
-  new_resource.upstream
-  new_resource.servers
-  new_resource.sockets
   new_resource.domains
   new_resource.listen
   new_resource.root_path

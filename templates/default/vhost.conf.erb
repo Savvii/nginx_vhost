@@ -1,14 +1,3 @@
-<% if @upstream %>
-upstream <%= @name %> {
-<% @servers.each do |server| -%>
-  server <%= server %> fail_timeout=0;
-<% end -%>
-<% @sockets.each do |socket| -%>
-  server <%= socket %> fail_timeout=0;
-<% end -%>
-}
-<% end %>
-
 server {
   server_name<% @domains.each do |domain| %> <%= domain %><% end %>;
   listen <%= @listen %>;
