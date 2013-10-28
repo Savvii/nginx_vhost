@@ -39,6 +39,11 @@ node.nginx.vhost.data_bag_name = "nginx"
 to it. So, if your wordpress lives in `/var/www/foo/wordpress`, then set
 site_root to `/var/www/foo`.
 
+### PHPFPM
+phpfpm is hardcoded. Should probably be a (group of) variables. Or a
+test whether phpfpm chef-recipe is there.
+For now, hardcoded. A block that expects a socket at `unix:/dev/shm/php5-fpm.<%= @name %>.sock`.
+
 ### SSL
 Define both @ssl_cert and @ssl_key to get SSL support. Defining both,
 with:
